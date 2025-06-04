@@ -1,0 +1,30 @@
+.navbar-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.navbar {
+  display: inline-flex;
+  background: #da8516;
+  border-radius: 9999px;
+  padding: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+a.active {
+  background-color: #e8e1d9;
+  border-radius: 9999px;
+  color: #000;
+}

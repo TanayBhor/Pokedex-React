@@ -1,0 +1,176 @@
+/*Search input*/
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 1.7rem;
+  /* padding-left: 2.3rem; */
+  /* padding-right: 2.3rem; */
+}
+
+.pokemon-input-container {
+  position: relative;
+  width: 40rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.pokemon-input-container::before {
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  right: 0;
+  background-color: #8b5cf6;
+  border-radius: 9999px;
+  filter: blur(8px);
+}
+
+.pokemon-input-container::after {
+  content: '';
+  position: absolute;
+  z-index: -10;
+  width: 5rem;
+  height: 5rem;
+  right: 3rem;
+  top: 0.75rem; 
+  border-radius: 9999px;
+  filter: blur(8px);
+}
+
+.pokemon-input {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #737373;
+  color: #171717;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.625rem;
+  outline: none;
+}
+
+.pokemon-input::placeholder {
+  color: #7c3aed;
+  opacity: 0.6;
+}
+
+.pokemon-input:focus {
+  border-color: #8b5cf6; 
+  box-shadow: 0 0 0 1px #8b5cf6;
+}
+
+.hamburger-icon{
+  height: 2rem;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.beat {
+  animation: beat 0.4s ease-in-out;
+}
+
+/*Pokemon Cards*/
+
+.main-container{
+  height: 100%;
+  padding: 0 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.cards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 5rem auto;
+
+  /* background-color: yellow; */
+}
+
+/* 
+@media screen and (max-width: 1150px) {
+  .main-container{
+    height: 100%;
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .main-container{
+    height: 100%;
+    padding: 0 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .main-container{
+    height: 100%;
+    padding: 0 3.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .main-container{
+    height: 100%;
+    padding: 0 3.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+} */

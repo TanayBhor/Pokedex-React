@@ -1,0 +1,21 @@
+.evolution-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.evolution-item {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.evolution-item img {
+  width: 100px;
+  height: 100px;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin: 0 10px;
+}

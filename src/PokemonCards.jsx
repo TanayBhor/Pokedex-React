@@ -1,51 +1,71 @@
-import './PokemonCards.css'
-import './index.css'
+import { useState } from 'react';
+import './styles/PokemonCards.css'
+import './styles/index.css'
+import { RiStarLine, RiStarFill } from 'react-icons/ri';
+import { GoStar, GoStarFill } from "react-icons/go";
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
+import typeStyles from './typeStyles.json'
 
 
-export const PokemonCards = ({pokemonData})=>{
-  
-    return(
-        <li className='individual-pokemon-card'>
-            
+export const PokemonCards = ({ pokemonData }) => {
 
-            <figure className='pokemon-image-container'> {/*pokemon image */}
+  const [clicked, setClicked] = useState(false);
+  const navigate = useNavigate();
 
-                <div className='svg-container'> {/*svg file*/}
+  return (
+    <li className='individual-pokemon-card'
+      onClick={() => navigate(`/pokemon/${pokemonData.name}`)}>
 
-                  <img src="./assets/star-line.svg" alt="" />
+      <div className='svg-container'>
 
-                </div>
+        <div
+          onClick={() => setClicked(!clicked)}
+          style={{ cursor: 'pointer' }}
+          className={`${clicked ? "beat" : ""}`}
+        >
+          {clicked ? (
+            <IoMdHeart size={30} color="#F10C45" border="1px solid black" />
+          ) : (
+            <IoMdHeartEmpty size={30} color="black" />
+          )}
+        </div>
 
-                <img className='pokemon-image' src={pokemonData.sprites.other.dream_world.front_default} alt="" />
+      </div>
 
-            </figure>
 
-            <div className='pokemon-name'> {/*Pokemon Name */}
-              <h1>{pokemonData.name.toUpperCase()}</h1>
-            </div>
+      <figure className='pokemon-image-container'> {/*pokemon image */}
 
-            <div className='types-container'>  {/*pokemon type */}
+        <img className='pokemon-image' src={pokemonData.sprites.other.dream_world.front_default} alt="" />
 
-                {pokemonData.types.length === 1 ? (
+      </figure>
 
-                  <p>
-                    {pokemonData.types[0].type.name.toUpperCase()}
-                  </p>
+      <div className='pokemon-details'>
 
-                ) : (
+        <div className='pokemon-namee'> {/*Pokemon Name */}
+          <h1>{pokemonData.name.toUpperCase()}</h1>
+        </div>
 
-                pokemonData.types.map((type, index) => (
+        <div className='types-container'>  {/*pokemon type */}
 
-                  <p key={index}>
-                    {type.type.name.toUpperCase()}
-                  </p>
-                  
-                ))
+          {pokemonData.types.map((type, index) => (
 
-                )}
+            <p
+              key={index}
+              style={{
+                backgroundColor: typeStyles.colors[type.type.name.toLowerCase()]
+              }}>
 
-            </div>
+              {type.type.name.toUpperCase()}
 
-        </li>
-    )
-  }
+            </p>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </li>
+  )
+}

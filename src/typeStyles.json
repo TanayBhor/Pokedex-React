@@ -1,0 +1,42 @@
+{
+  "colors": {
+    "normal": "#A8A878",
+    "fire": "#F08030",
+    "water": "#6890F0",
+    "electric": "#F8D030",
+    "grass": "#78C850",
+    "ice": "#98D8D8",
+    "fighting": "#C03028",
+    "poison": "#A040A0",
+    "ground": "#E0C068",
+    "flying": "#A890F0",
+    "psychic": "#F85888",
+    "bug": "#A8B820",
+    "rock": "#B8A038",
+    "ghost": "#705898",
+    "dragon": "#7038F8",
+    "dark": "#705848",
+    "steel": "#B8B8D0",
+    "fairy": "#EE99AC"
+  },
+  "gradients": {
+    "normal": "linear-gradient(to top, rgba(168, 168, 120, 0.6), rgba(168, 168, 120, 0.9))",
+    "fire": "linear-gradient(to top, rgba(240, 128, 48, 0.6), rgba(240, 128, 48, 0.9))",
+    "water": "linear-gradient(to top, rgba(104, 144, 240, 0.6), rgba(104, 144, 240, 0.9))",
+    "electric": "linear-gradient(to top, rgba(248, 208, 48, 0.6), rgba(248, 208, 48, 0.9))",
+    "grass": "linear-gradient(to top, rgba(120, 200, 80, 0.6), rgba(120, 200, 80, 0.9))",
+    "ice": "linear-gradient(to top, rgba(152, 216, 216, 0.6), rgba(152, 216, 216, 0.9))",
+    "fighting": "linear-gradient(to top, rgba(192, 48, 40, 0.6), rgba(192, 48, 40, 0.9))",
+    "poison": "linear-gradient(to top, rgba(160, 64, 160, 0.6), rgba(160, 64, 160, 0.9))",
+    "ground": "linear-gradient(to top, rgba(224, 192, 104, 0.6), rgba(224, 192, 104, 0.9))",
+    "flying": "linear-gradient(to top, rgba(168, 144, 240, 0.6), rgba(168, 144, 240, 0.9))",
+    "psychic": "linear-gradient(to top, rgba(248, 88, 136, 0.6), rgba(248, 88, 136, 0.9))",
+    "bug": "linear-gradient(to top, rgba(168, 184, 32, 0.6), rgba(168, 184, 32, 0.9))",
+    "rock": "linear-gradient(to top, rgba(184, 160, 56, 0.6), rgba(184, 160, 56, 0.9))",
+    "ghost": "linear-gradient(to top, rgba(112, 88, 152, 0.6), rgba(112, 88, 152, 0.9))",
+    "dragon": "linear-gradient(to top, rgba(112, 56, 248, 0.6), rgba(112, 56, 248, 0.9))",
+    "dark": "linear-gradient(to top, rgba(112, 88, 72, 0.6), rgba(112, 88, 72, 0.9))",
+    "steel": "linear-gradient(to top, rgba(184, 184, 208, 0.6), rgba(184, 184, 208, 0.9))",
+    "fairy": "linear-gradient(to top, rgba(238, 153, 172, 0.6), rgba(238, 153, 172, 0.9))"
+  }
+}
