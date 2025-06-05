@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Primary Colors */
+  --color-primary: #E63946;       /* Crimson Red */
+  --color-secondary: #3A86FF;     /* Water Blue */
+  --color-highlight: #F1FA8C;     /* Lemon Yellow */
+
+  /* Background and Text */
+  --color-background: #F8F9FA;    /* Snow White */
+  --color-text: #212529;          /* Jet Black */
+  --color-border: #343A40;        /* Charcoal Gray */
+  --color-muted: #E9ECEF;         /* Soft Gray */
+
+  /* Accent / Status */
+  --color-favorite: #FF6B35;      /* Sunset Orange */
+
+  --type-fire: #FF9F1C;
+  --type-water: #56CCF2;
+  --type-grass: #8BC34A;
+  --type-electric: #FDD835;
+  --type-psychic: #FF6FB5;
+  --type-ice: #91EAE4;
+  --type-rock: #A1887F;
+  --type-ground: #E0C097;
+  --type-poison: #C084FC;
+  --type-dragon: #8E44AD;
+  --type-dark: #2D3436;
+  --type-steel: #B0BEC5;
+  --type-fairy: #F48FB1;
+}
+
+
 *{
   margin: 0;
   padding: 0;
@@ -7,4 +40,5 @@
 html,body{
   height: 100vh;
   width: 100vw;
+  font-family: roboto, 'sans-serif';
 }

@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 1.2rem auto;
+  width: 70%;
+  padding: 1rem 0;
+  height: 12rem;
 }
 
 .evolution-item {
@@ -11,8 +15,8 @@
 }
 
 .evolution-item img {
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
 }
 
 .arrow {

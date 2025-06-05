@@ -1,5 +1,5 @@
 import React from 'react'
-import PokemonDetail from '../PokemonDetail'
+import PokemonDetail from '../pages/detail/PokemonDetail'
 import { NavLink, Outlet } from 'react-router-dom'
 
 const DetailLayout = () => {

@@ -1,12 +1,15 @@
 .individual-pokemon-card{
   width: 100%;
-  border: 2px solid black;
+  position: relative;
+  /* border: 2px solid var(--color-border); */
   border-radius: 10px;
   list-style-type: none;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background: linear-gradient(135deg, #def3fd, #b5d8f8); */
+  /* box-shadow: 0px 0px 13px 3px rgba(170,162,162,0.86); */
 }
 
 .svg-container{
@@ -17,10 +20,47 @@
 
 .svg-container div{
   position: absolute;
-  /* z-index: 2; */
-  margin: 0.2rem 0.2rem 0 0;
+  z-index: 2;
+  margin: 0.9rem 0.9rem 0 0;
 
   /* display: none; */
+}
+
+.favourite-btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 9;
+  transition: transform 0.2s ease;
+}
+
+.favourite-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.2s ease;
+}
+
+.favourite-btn.beat {
+  animation: heartBeat 0.4s ease-in-out;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .pokemon-image-container{
@@ -36,10 +76,10 @@
 }
 
 .pokemon-details{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pokemon-namee{
@@ -50,15 +90,18 @@
 .types-container{
   display: flex;
   gap: 2rem;
+  color: white;
 }
 
 .types-container p{
-    font-size: 17px;
+  font-size: 17px;
   border-radius: 10px;
   padding: 0.3rem 0.8rem;
   margin-bottom: 1.2rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
+
+
 
 @media screen and (max-width: 1150px) {
   .pokemon-image-container .pokemon-image{

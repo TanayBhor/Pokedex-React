@@ -1,18 +1,58 @@
 .about-container{
-  margin: 0 auto;
-    width: 70%;
+  margin: 1.2rem auto;
+  width: 70%;
+  
 }
 
-
-.types-list{
+.pokemon-height, .pokemon-weight{
+  font-weight: bold;
   display: flex;
-  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
-.type-badge{
-    font-size: 17px;
-  border-radius: 10px;
-  padding: 0.3rem 0.8rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid black;
+.pokemon-height h3, .pokemon-weight h3{
+  font-weight: bold;
+  margin: 0;
+  align-self: start;
+  width: 10rem;
 }
+
+.pokemon-height span, .pokemon-weight span{
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.type-effectiveness {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  align-items: start;
+}
+
+.effectiveness-row {
+  display: contents; /* Keep rows aligned under each label */
+}
+
+.effectiveness-row h3 {
+  font-weight: bold;
+  margin: 0;
+  align-self: start;
+  width: 10rem;
+}
+
+.types-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, max-content));
+  gap: 0.5rem;
+}
+
+.type-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  color: black;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+

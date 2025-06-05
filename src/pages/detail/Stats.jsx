@@ -1,6 +1,6 @@
 import React from 'react'
 import { useOutletContext, useParams } from 'react-router-dom';
-import '../styles/Stats.css'
+import '../../styles/Stats.css'
 
 const Stats = () => {
 
@@ -21,7 +21,11 @@ const Stats = () => {
             <div className="stat-item" key={index}>
 
               <div className="stat-label">
-                {statName.toUpperCase()} — {statValue}
+                {statName.toUpperCase()}
+              </div>
+
+              <div className="stat-value">
+                {statValue}
               </div>
 
               <div className="stat-bar-wrapper">

@@ -38,5 +38,25 @@
     "dark": "linear-gradient(to top, rgba(112, 88, 72, 0.6), rgba(112, 88, 72, 0.9))",
     "steel": "linear-gradient(to top, rgba(184, 184, 208, 0.6), rgba(184, 184, 208, 0.9))",
     "fairy": "linear-gradient(to top, rgba(238, 153, 172, 0.6), rgba(238, 153, 172, 0.9))"
+  },
+  "boxShadow": {
+    "normal": "0px 0px 13px 3px rgba(168, 168, 120, 0.6)",
+    "fire": "0px 0px 13px 3px rgba(240, 128, 48, 0.6)",
+    "water": "0px 0px 13px 3px rgba(104, 144, 240, 0.6)",
+    "electric": "0px 0px 13px 3px rgba(248, 208, 48, 0.6)",
+    "grass": "0px 0px 20px 5px rgba(120, 200, 80, 0.7)",
+    "ice": "0px 0px 13px 3px rgba(152, 216, 216, 0.6)",
+    "fighting": "0px 0px 13px 3px rgba(192, 48, 40, 0.6",
+    "poison": "0px 0px 13px 3px rgba(160, 64, 160, 0.6)",
+    "ground": "0px 0px 13px 3px rgba(224, 192, 104, 0.6)",
+    "flying": "0px 0px 13px 3px rgba(168, 144, 240, 0.6)",
+    "psychic": "0px 0px 13px 3px rgba(248, 88, 136, 0.6)",
+    "bug": "0px 0px 13px 3px rgba(168, 184, 32, 0.6)",
+    "rock": "0px 0px 13px 3px rgba(184, 160, 56, 0.6)",
+    "ghost": "0px 0px 13px 3px rgba(112, 88, 152, 0.6)",
+    "dragon": "0px 0px 13px 3px rgba(112, 56, 248, 0.6)",
+    "dark": "0px 0px 13px 3px rgba(112, 88, 72, 0.6",
+    "steel": "0px 0px 13px 3px rgba(184, 184, 208, 0.6)",
+    "fairy": "0px 0px 13px 3px rgba(238, 153, 172, 0.6)"
   }
 }

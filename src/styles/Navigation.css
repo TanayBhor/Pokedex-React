@@ -1,17 +1,17 @@
-.navbar-container{
+.navigation-container{
   display: flex;
   justify-content: center;
 
 }
 
-.navbar {
+.navigation{
   display: inline-flex;
   background: #da8516;
   border-radius: 9999px;
   padding: 8px;
 }
 
-.nav-link {
+.navigation-link {
   text-decoration: none;
   color: #333;
   font-weight: 600;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-a.active {
+.navigation a.active {
   background-color: #e8e1d9;
   border-radius: 9999px;
   color: #000;

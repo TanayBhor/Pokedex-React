@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
-import '../styles/Evolution.css';
+import '../../styles/Evolution.css';
 
 const Evolution = () => {
   const pokemon = useOutletContext();
   const [evolutionChain, setEvolutionChain] = useState([]);
+
+  // pokemonData.sprites.other.dream_world.front_default
 
   useEffect(() => {
     const fetchEvolutionChain = async () => {
@@ -12,7 +14,7 @@ const Evolution = () => {
         // Step 1: Get species data
         const speciesRes = await fetch(pokemon.species.url);
         const speciesData = await speciesRes.json();
-
+        console.log(pokemon)
         // Step 2: Get evolution chain data
         const evolutionRes = await fetch(speciesData.evolution_chain.url);
         const evolutionData = await evolutionRes.json();
@@ -36,7 +38,7 @@ const Evolution = () => {
             const data = await res.json();
             return {
               name: data.name,
-              image: data.sprites.front_default,
+              image: data.sprites.other.dream_world.front_default,
             };
           })
         );

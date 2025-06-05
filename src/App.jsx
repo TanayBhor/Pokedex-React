@@ -1,25 +1,36 @@
-import { Pokemon } from './Pokemon'
+import DetailLayout from './layout/DetailLayout'
+import RootLayout from './layout/RootLayout'
+import About from './pages/detail/About'
+import Evolution from './pages/detail/Evolution'
+import Stats from './pages/detail/Stats'
+import Types from './pages/Types'
+import Favourite from './pages/Favourite'
+import { Home } from './pages/Home'
 import './styles/App.css'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Navigate } from 'react-router-dom'
-import PokemonDetail from './PokemonDetail'
-import About from './pages/About'
-import Stats from './pages/Stats'
-import Evolution from './pages/Evolution'
-import RootLayout from './layout/RootLayout'
-import DetailLayout from './layout/DetailLayout'
+import NotFound from './pages/NotFound'
+import PokemonByType from './pages/PokemonByType'
 
 function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />}>
-        <Route index element={<Pokemon />} />
+
+        <Route path='/' element={<Home />} />
+        <Route path='/type' element={<Types />}>
+          <Route path="/type/:typeName" element={<PokemonByType />} />
+        </Route>
+        <Route path='/favourite' element={<Favourite />} />
+
         <Route path="/pokemon/:name" element={<DetailLayout />}>
           <Route index element={<Navigate to="about" replace />} />
           <Route path='about' element={<About />} />
           <Route path='stats' element={<Stats />} />
           <Route path='evolution' element={<Evolution />} />
         </Route>
+
+        <Route path='*' element={<NotFound />} />
       </Route>
     )
   )
