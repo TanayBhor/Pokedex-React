@@ -17,9 +17,9 @@ const Types = () => {
     const typeApi = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${i}.png`
 
     types.push({
-    name: typeNames[i - 1],
-    image: typeApi
-  });
+      name: typeNames[i - 1],
+      image: typeApi
+    });
   }
 
   return (

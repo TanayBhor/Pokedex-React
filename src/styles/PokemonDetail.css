@@ -30,7 +30,7 @@
   color: white;
 }
 
-.detail-header h1 {
+.pokemon-info h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -61,3 +61,21 @@
 }
 
 
+@media screen and (max-width: 540px) {
+
+  .detail-header{
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .pokemon-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+
+  .pokemon-info{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
