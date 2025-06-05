@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
 import '../styles/PokemonCards.css'
 import '../styles/index.css'
-import { RiStarLine, RiStarFill } from 'react-icons/ri';
-import { GoStar, GoStarFill } from "react-icons/go";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import typeStyles from '../typeStyles.json'
-import { CgPokemon } from "react-icons/cg";
-import { FaFire } from "react-icons/fa";
-
 
 export const PokemonCards = ({ pokemonData }) => {
 
@@ -66,40 +61,23 @@ export const PokemonCards = ({ pokemonData }) => {
       }}
     >
 
-      <button onClick={toggleFavourite} className={`favourite-btn ${isFavourite ? 'beat' : ''}`}>
+      <button 
+      onClick={toggleFavourite} 
+      className={`favourite-btn ${isFavourite ? 'beat' : ''}`}>
+
         {isFavourite ? <IoMdHeart fill='#e63946' /> : <IoMdHeartEmpty fill='#444444'/> }
+
       </button>
 
-
       <figure className='pokemon-image-container'> {/*pokemon image */}
-
         <img className='pokemon-image' src={pokemonData.sprites.other.dream_world.front_default} alt="" />
-
       </figure>
 
       <div className='pokemon-details'>
 
-        <div className='pokemon-namee'> {/*Pokemon Name */}
+        {/* <div className='pokemon-namee'> */}
           <h1>{pokemonData.name.toUpperCase()}</h1>
-        </div>
-
-        {/* <div className='types-container'>  
-
-          {pokemonData.types.map((type, index) => (
-
-            <p
-              key={index}
-              style={{
-                backgroundColor: typeStyles.colors[type.type.name.toLowerCase()]
-              }}>
-                <FaFire />
-              {type.type.name.toUpperCase()}
-
-            </p>
-
-          ))}
-
-        </div> */}
+        {/* </div> */}
 
         <div className='types-container'>
           {pokemonData.types.map((type, index) => {

@@ -13,26 +13,25 @@
     bottom: 0;
     font-size: 10rem;
     color: #3168B1;
-    
-    /* fill: red; */
 }
 
-.fire-logo{
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-}
-
-.fav-logo{
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
-}
-
-.home-logo{
+.fire-logo, .fav-logo, .home-logo{
     color: rgb(255, 255, 255);
     font-size: 1.3rem;
 }
 
 .navbar-holder{
+    width: fit-content;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    border-radius: 20rem;
+    gap: 1.5rem;
+}
+
+.navbar-container{
     height: 5rem;
     /* background-color: var(--color-primary); */
     background-color: rgba(255, 255, 255, 0.4);
@@ -44,17 +43,6 @@
     top: 0;
     width: 100vw;
     z-index: 10;
-}
-
-.navbar-container{
-    width: fit-content;
-    background-color: crimson;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.6rem 1rem;
-    border-radius: 20rem;
-    gap: 1.5rem;
 }
 
 .search-bar-container{
@@ -73,7 +61,6 @@
 
 .search-bar-container.expanded {
     width: 20rem;
-    /* justify-content: flex-start; */
     padding-left: 0.5rem;
 }
 
@@ -98,7 +85,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
 }
 
 .search-bar-container .svg {
@@ -118,31 +105,31 @@
     text-decoration: none;
 }
 
-.navbar-container p{
-    color: white;
+@media screen and (max-width: 528px) {
+    .search-bar-container.expanded {
+        width: 15rem;
+        padding-left: 0.5rem;
+    }
 }
 
-.navbar-container a.active{
-    text-decoration: underline;
-    text-underline-offset: 0.35rem;
-    text-decoration-thickness: 2px;
-    text-decoration-color: black;
+@media screen and (max-width: 450px) {
+    .search-bar-container.expanded {
+        width: 12rem;
+        padding-left: 0.5rem;
+    }
 }
 
-
-/* Make sure parent allows absolute positioning */
+/*
 .search-bar-container {
   position: relative;
   overflow: visible;
 }
 
-/* Wraps input and dropdown */
 .search-input-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* Suggestion dropdown style */
 .suggestions-dropdown {
   position: absolute;
   top: 100%;
@@ -171,3 +158,5 @@
 .suggestions-dropdown li:hover {
   background-color: #f0f0f0;
 }
+
+*/

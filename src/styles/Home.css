@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 1200px) {
   .main-container{
-    padding: 0 6rem;
+    padding: 0 5rem;
   }
 
   .cards{
@@ -26,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
   .main-container{
     padding: 0 4.5rem;
   }
@@ -43,6 +43,7 @@
   }
 
   .cards{
+    margin: 8rem auto;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -53,6 +54,7 @@
   }
 
   .cards{
+    margin: 7rem auto;
     grid-template-columns: repeat(1, 1fr);
   }
 } 
@@ -63,6 +65,7 @@
   }
 
   .cards{
+    margin: 7rem auto;
     grid-template-columns: repeat(1, 1fr);
   }
 } 

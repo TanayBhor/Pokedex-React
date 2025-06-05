@@ -28,7 +28,6 @@ const Navbar = () => {
         setSuggestions([])
     }
 
-
     useEffect(() => {
         async function fetchPokemonList() {
             const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000')
@@ -61,9 +60,9 @@ const Navbar = () => {
             <SiPokemon className='app-logo'/>
         </div> */}
 
-            <header className='navbar-holder'>
+            <header className='navbar-container'>
 
-                <div className="navbar-container">
+                <div className="navbar-holder">
 
                     <NavLink to={'/'}><GoHome className='home-logo' /></NavLink>
 
@@ -86,7 +85,7 @@ const Navbar = () => {
                             />
 
                         </div>
-                        {isExpanded && suggestions.length > 0 && (
+                        {/* {isExpanded && suggestions.length > 0 && (
                             <ul className="suggestions-dropdown">
                                 {suggestions.map((name, index) => (
                                     <li key={index} onClick={() => handleSuggestionClick(name)}>
@@ -94,7 +93,7 @@ const Navbar = () => {
                                     </li>
                                 ))}
                             </ul>
-                        )}
+                        )} */}
 
                     </div>
 
