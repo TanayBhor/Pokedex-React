@@ -1,7 +1,6 @@
 .about-container{
   margin: 1.2rem auto;
   width: 70%;
-  
 }
 
 .pokemon-height, .pokemon-weight{
@@ -56,3 +55,25 @@
 }
 
 
+@media screen and (max-width: 690px) {
+  .about-container{
+    margin: 1.2rem auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .type-effectiveness {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    align-items: start;
+  }
+
+  .types-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

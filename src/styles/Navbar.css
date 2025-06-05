@@ -114,7 +114,7 @@
 
 @media screen and (max-width: 450px) {
     .search-bar-container.expanded {
-        width: 12rem;
+        width: 11rem;
         padding-left: 0.5rem;
     }
 }

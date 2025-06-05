@@ -36,7 +36,7 @@ const PokemonDetail = () => {
         opacity: 0,
         duration: 0.4,
         ease: 'power3.in',
-        onComplete: () => navigate('/')
+        onComplete: () => navigate(-1)
       });
     } else {
       navigate('/');

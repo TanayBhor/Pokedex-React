@@ -37,8 +37,6 @@ const Favourite = () => {
     : (<section className="fav-cards-container">
       <ul className="no-cards"><p>No fav</p></ul>
     </section>)
-  
-    
   );
 };
 

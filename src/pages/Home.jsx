@@ -34,7 +34,7 @@ export const Home = () => {
 
                 setTimeout(() => {
                 setLoading(false)
-                }, 2000)
+                }, 500)
 
             } catch (error) {
                 console.log(error);

@@ -23,3 +23,38 @@
   font-size: 2rem;
   margin: 0 10px;
 }
+
+
+@media screen and (max-width: 770px) {
+  .evolution-container {
+  width: 90%;
+  padding: 1rem 0;
+  height: 12rem;
+}
+}
+
+@media screen and (max-width: 615px) {
+  .evolution-container {
+    width: 90%;
+    padding: 1rem 0;
+    height: 12rem;
+  }
+
+  .evolution-item img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* .evolution-container {
+    width: 100%;
+    padding: 1rem 0;
+    height: 12rem;
+  }
+
+  .evolution-item img {
+    width: 3rem;
+    height: 3rem;
+  } */
+}
