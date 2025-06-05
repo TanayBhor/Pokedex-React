@@ -26,7 +26,7 @@ const Favourite = () => {
   }, [favourites]);
 
   return (
-    favourites.length>1 ? 
+    favourites.length>0 ? 
     (<section className="fav-cards-container">
       <ul className="fav-cards">
         {pokemonList.map((p) => (
