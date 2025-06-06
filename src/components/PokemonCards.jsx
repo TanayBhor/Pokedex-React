@@ -55,28 +55,34 @@ export const PokemonCards = ({ pokemonData }) => {
   return (
     <li className='individual-pokemon-card'
       onClick={() => navigate(`/pokemon/${pokemonData.name}`)}
-      style={{ 
-        background: typeStyles.gradients[pokemonData.types[0].type.name], 
+      style={{
+        background: typeStyles.gradients[pokemonData.types[0].type.name],
         boxShadow: typeStyles.boxShadow[pokemonData.types[0].type.name]
       }}
     >
 
-      <button 
-      onClick={toggleFavourite} 
-      className={`favourite-btn ${isFavourite ? 'beat' : ''}`}>
+      <button
+        onClick={toggleFavourite}
+        className={`favourite-btn ${isFavourite ? 'beat' : ''}`}>
 
-        {isFavourite ? <IoMdHeart fill='#e63946' /> : <IoMdHeartEmpty fill='#444444'/> }
+        {isFavourite ? <IoMdHeart fill='#e63946' /> : <IoMdHeartEmpty fill='#444444' />}
 
       </button>
 
       <figure className='pokemon-image-container'> {/*pokemon image */}
-        <img className='pokemon-image' src={pokemonData.sprites.other.dream_world.front_default} alt="" />
+        <img className='pokemon-image'
+          src={
+            pokemonData.sprites.other.dream_world.front_default ||
+            pokemonData.sprites.other['official-artwork'].front_default ||
+            pokemonData.sprites.front_default
+          } 
+          alt="" />
       </figure>
 
       <div className='pokemon-details'>
 
         {/* <div className='pokemon-namee'> */}
-          <h1>{pokemonData.name.toUpperCase()}</h1>
+        <h1>{pokemonData.name.toUpperCase()}</h1>
         {/* </div> */}
 
         <div className='types-container'>

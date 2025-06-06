@@ -19,9 +19,9 @@ const Navbar = () => {
         setIsExpanded(prev => !prev);
     };
 
-    { console.log("Suggestions:", allPokemon) }
-    { console.log("Suggestions:", search) }
-    { console.log("Suggestions:", suggestions) }
+    // { console.log("Suggestions:", allPokemon) }
+    // { console.log("Suggestions:", search) }
+    // { console.log("Suggestions:", suggestions) }
 
     const handleSuggestionClick = (name) => {
         setSearch(name)

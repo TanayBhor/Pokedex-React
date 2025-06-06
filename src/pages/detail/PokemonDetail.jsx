@@ -11,7 +11,7 @@ const PokemonDetail = () => {
   const navigate = useNavigate();
   const [pokemon, setPokemon] = useState(null);
   const detailRef = useRef(null);
-  
+
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -36,13 +36,13 @@ const PokemonDetail = () => {
         opacity: 0,
         duration: 0.4,
         ease: 'power3.in',
-        onComplete: () => navigate(-1)
+        onComplete: () => navigate('/')
       });
     } else {
       navigate('/');
     }
   };
-  
+
   if (!pokemon) return null;
 
   return (
@@ -59,7 +59,12 @@ const PokemonDetail = () => {
           <div className="pokemon-info">
             <h1>{pokemon.name.toUpperCase()}</h1>
             <img
-              src={pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}
+              src={
+                pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default ||
+                pokemon.sprites.other['official-artwork'].front_default ||
+                pokemon.sprites.front_default
+
+              }
               alt={pokemon.name}
               className="sprite-pixel"
             />

@@ -4,9 +4,6 @@ import '../styles/Loading.css'
 
 const Loading = () => {
   return (
-    // <div className='loading-screen'>
-    //     <img src={load} alt="" />
-    // </div>
     <div className="loader">
         <div className="bar1"></div>
         <div className="bar2"></div>

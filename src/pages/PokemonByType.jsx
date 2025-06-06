@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { PokemonCards } from '../components/PokemonCards'; 
+import { PokemonCards } from '../components/PokemonCards';
+import Loading from './Loading';
 
 const PokemonByType = () => {
   const { typeName } = useParams();
@@ -10,21 +11,26 @@ const PokemonByType = () => {
   useEffect(() => {
     const fetchTypeData = async () => {
       try {
-        setLoading(true);
+        // setLoading(true);
+
         const response = await fetch(`https://pokeapi.co/api/v2/type/${typeName}`);
         const data = await response.json();
 
-        const pokemonOfType = data.pokemon.map((p) => p.pokemon);
-        const limitedPokemon = pokemonOfType.slice(0, 30); // Optional limit
+        const pokemonOfType = data.pokemon.map(p => p.pokemon);
+        // const limitedPokemon = pokemonOfType.slice(0, 30);
 
+        // Fetch detailed data for each Pokémon
         const detailedData = await Promise.all(
-          limitedPokemon.map(async (p) => {
+          pokemonOfType.map(async (p) => {
             const res = await fetch(p.url);
-            return res.json();
+            return await res.json(); // full object: name, sprites, types, etc.
           })
         );
 
         setPokemonList(detailedData);
+        
+          setLoading(false)
+
       } catch (err) {
         console.error(err);
       } finally {
@@ -36,18 +42,17 @@ const PokemonByType = () => {
   }, [typeName]);
 
   return (
-    <section className="type-pokemon-page">
-      <h2>Pokémon of type: {typeName.charAt(0).toUpperCase() + typeName.slice(1)}</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul className="type-pokemon-list">
-          {pokemonList.map((pokemon) => (
+    <div className='main-container'>
+      <div className='cards'>
+        {loading ? (
+          <Loading />
+        ) : (
+          pokemonList.map((pokemon) => (
             <PokemonCards key={pokemon.id} pokemonData={pokemon} />
-          ))}
-        </ul>
-      )}
-    </section>
+          ))
+        )}
+      </div>
+    </div>
   );
 };
 

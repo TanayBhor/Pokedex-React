@@ -9,6 +9,7 @@ import { Home } from './pages/Home'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Navigate } from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import PokemonByType from './pages/PokemonByType'
+import TypesLayout from './layout/TypesLayout'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
       <Route path='/' element={<RootLayout />}>
 
         <Route path='/' element={<Home />} />
-        <Route path='/type' element={<Types />}>
+        <Route path='/type' element={<TypesLayout />}>
+          <Route path="/type" element={<Types />} />
           <Route path="/type/:typeName" element={<PokemonByType />} />
         </Route>
         <Route path='/favourite' element={<Favourite />} />
